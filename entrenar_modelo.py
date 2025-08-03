@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import joblib
 
-df = pd.read_csv("calificaciones_1000_estudiantes_con_id.csv.csv")
+df = pd.read_csv("calificaciones_1000_estudiantes_con_id.csv")
 
 df = df[df["Asistencia"] >= 80].copy()
 df["Bono"] = np.where(df["Asistencia"] > 95, df["TP"] * 0.2, 0)
